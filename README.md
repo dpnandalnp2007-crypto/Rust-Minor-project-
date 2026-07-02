@@ -1,4 +1,5 @@
-# minivm
+# Rust Minor Project (Intersnship)
+# MINIVM : A Deterministic Stack-Based Virtual Machine
 
 A stack-based bytecode virtual machine with its own assembler and
 disassembler. One binary, three subcommands, sharing a single instruction
