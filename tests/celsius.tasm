@@ -1,0 +1,11 @@
+; Celsius -> Fahrenheit: F = C * 9 / 5 + 32, with C = 100
+;   100 * 9 = 900 / 5 = 180 + 32 = 212  ✓
+PUSH 100
+PUSH 9
+MUL
+PUSH 5
+DIV
+PUSH 32
+ADD
+PRINT
+HALT

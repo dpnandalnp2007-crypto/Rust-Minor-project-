@@ -1,0 +1,3 @@
+; Triggers: ip past end without HALT (assembler warns, VM traps at end)
+PUSH 1
+PRINT

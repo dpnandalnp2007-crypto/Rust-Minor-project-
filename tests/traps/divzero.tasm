@@ -1,0 +1,5 @@
+; Triggers: division by zero (DIV)
+PUSH 1
+PUSH 0
+DIV
+HALT

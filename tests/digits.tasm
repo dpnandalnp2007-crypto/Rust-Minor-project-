@@ -1,0 +1,34 @@
+; Print digits of 9274 on four lines using only DIV/MOD (unrolled).
+; Strategy: at each step we have the remaining number N on the stack.
+; We compute N / 10 -> quotient (kept), N % 10 -> next digit (printed).
+; Print the digit we just extracted.
+; For 9274:
+;   9274 / 10 = 927  r 4
+;   927  / 10 = 92   r 7
+;   92   / 10 = 9    r 2
+;   9    / 10 = 0    r 9  (we stop printing the leading 9 when N becomes 0... no,
+;                            spec says "digits of 9274" so we WANT the 9 too)
+; We unroll: just do the 4 passes (the last one will have N=9, /10=0, %10=9).
+PUSH 9274
+PUSH 10
+MOD
+PRINT
+PUSH 9274
+PUSH 10
+DIV
+PUSH 10
+MOD
+PRINT
+PUSH 927
+PUSH 10
+DIV
+PUSH 10
+MOD
+PRINT
+PUSH 92
+PUSH 10
+DIV
+PUSH 10
+MOD
+PRINT
+HALT

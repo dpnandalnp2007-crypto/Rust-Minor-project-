@@ -1,0 +1,28 @@
+; Horner's method: 3x^3 + 2x^2 + 5x + 7 at x = 11
+; Slot 0 holds x.
+; Algorithm (left-to-right Horner):
+;   ((3*x + 2)*x + 5)*x + 7
+; At x=11:
+;   (((3*11 + 2) * 11 + 5) * 11 + 7)
+;   = ((35) * 11 + 5) * 11 + 7
+;   = (385 + 5) * 11 + 7
+;   = 390 * 11 + 7
+;   = 4290 + 7
+;   = 4297  ✓
+PUSH 11
+STORE 0
+LOAD 0
+PUSH 3
+MUL
+PUSH 2
+ADD
+LOAD 0
+MUL
+PUSH 5
+ADD
+LOAD 0
+MUL
+PUSH 7
+ADD
+PRINT
+HALT

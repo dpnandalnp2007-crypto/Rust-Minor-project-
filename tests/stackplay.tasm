@@ -1,0 +1,15 @@
+; a^2 + b^2 for a=12, b=35 — each input pushed exactly once, forces DUP/SWAP/slots
+; 12^2 + 35^2 = 144 + 1225 = 1369
+PUSH 12
+STORE 0
+PUSH 35
+STORE 1
+LOAD 0
+LOAD 0
+MUL
+LOAD 1
+LOAD 1
+MUL
+ADD
+PRINT
+HALT

@@ -1,0 +1,5 @@
+; Triggers: division by zero (MOD)
+PUSH 1
+PUSH 0
+MOD
+HALT
